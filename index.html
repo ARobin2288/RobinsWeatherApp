@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/ea6c14e433.js" crossorigin="anonymous"></script>
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <form id="searching">
+                <div class="row">
+                    <div class="col-3">
+                        <input type="search" class="w-100" id="searchbar" placeholder="Enter City Name..."
+                            autofocus="on" autocomplete="off" />
+                    </div>
+                    <div class="col-2">
+                        <button class="search w-75" id="search" type="submit">
+                            <i class="fas fa-search-location"></i>
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <button class="home w-75" id="home" type="submit">
+                            <i class="fas fa-home"></i>
+                        </button>
+                    </div>
+                    <div class="col-5">
+                    </div>
+                </div>
+            </form>
+        </header>
+        <main>
+            <form class="todays-info">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card now">
+                            <p class="card-text" id="date"></p>
+                            <h2 class="card-title" id="city"></h2>
+                            <br />
+                        </div>
+                        <br />
+                        <br />
+                        <div class="card extra" id="sun">
+                            <h4 class="card-title">SUNRISE</h4>
+                            <p class="sunrise">6:38 am</p>
+                            <h4 class="card-title">SUNSET</h4>
+                            <p class="sunset">5:30pm</p>
+                            <h4 class="card-title">HUMITITY</h4>
+                            <p id="humidity"></p>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="col-8">
+                        <br />
+                        <br />
+                        <div class="card current-temperature">
+                            <br />
+                            <h4 class="card-text" id="weather-conditions"></h4>
+                            <h1 class="card-title">
+                                <i class="far fa-snowflake" id="snowflake"></i>
+                                <br />
+                                <span class="temperature" id="temperature"></span>
+                                <span class="units">°
+                                    <a href="#" id="fahrenheit-link">F</a> |
+                                    <a href="#" id="celcius-link">C</a>
+                                </span>
+                            </h1>
+                            <h4 class="card-title">FEELS LIKE</h4>
+                            <p class="card-text" id="feels-like"></p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <br />
+            <ul>
+                <li>
+                    <i class="fas fa-sun" id="icons"></i>
+                    <br />
+                    <span id="five-day">25° | 16°</span>
+                    <br />
+                    SATURDAY
+                </li>
+                <li>
+                    <i class="far fa-snowflake" id="icons"></i>
+                    <br />
+                    <span id="five-day">25° | 16°</span>
+                    <br />
+                    SUNDAY
+                </li>
+                <li>
+                    <i class="fas fa-cloud-sun" id="icons"></i>
+                    <br />
+                    <span id="five-day">25° | 16°</span>
+                    <br />
+                    MONDAY
+                </li>
+                <li>
+                    <i class="fas fa-sun" id="icons"></i>
+                    <br />
+                    <span id="five-day">25° | 16°</span>
+                    <br />
+                    TUESDAY
+                </li>
+                <li>
+                    <i class="far fa-snowflake" id="icons"></i>
+                    <br />
+                    <span id="five-day">25° | 16°</span>
+                    <br />
+                    WEDNESDAY
+                </li>
+            </ul>
+        </main>
+        <br />
+        <footer>
+            Coded By: Robin A.
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
